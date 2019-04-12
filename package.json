@@ -1,0 +1,46 @@
+{
+  "name": "clappy",
+  "version": "1.0.0",
+  "description": "An interactive client for RESTful APIs",
+  "main": "clappy.js",
+  "bin": {
+    "clappy": "clappy.js"
+  },
+  "author": "Tom Borger <thomas.borger@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^2.4.0",
+    "clipboardy": "^1.2.3",
+    "credstash": "^1.0.44",
+    "inquirer": "^5.2.0",
+    "jsome": "^2.5.0",
+    "json-diff": "^0.5.2",
+    "lodash": "^4.17.5",
+    "moment": "^2.22.1",
+    "pkg": "^4.3.1",
+    "qs": "^6.5.2",
+    "request": "^2.85.0",
+    "request-promise-native": "^1.0.5",
+    "yargs": "^11.0.0"
+  },
+  "scripts": {
+    "setup": "node ./sh/setup",
+    "start": "node clappy.js",
+    "test": "MODE=module jest",
+    "test-mod": "MODE=module jest",
+    "test-tty": "MODE=static jest",
+    "test-all": "MODE=module jest; MODE=static jest"
+  },
+  "devDependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "jest": "^23.4.1",
+    "uuid": "^3.3.2"
+  },
+  "jest": {
+    "globalSetup": "./test/util/setup",
+    "globalTeardown": "./test/util/teardown",
+    "testEnvironment": "node",
+    "verbose": true
+  }
+}
